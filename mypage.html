@@ -1,0 +1,51 @@
+<html>
+<body>
+    <div id="title">
+        <h1>Welcome to Tofunmi's web page</h1>
+        <p>This is where dreams come true</p>
+        <button onclick="makeDreamComeTrue()">Make dress come true</button>
+    </div>
+</body>
+    
+</html>
+
+<style>
+    body {
+
+    background-image: url(https://imgs.search.brave.com/n1xpaOCFugB0ZNlrFATJVxsHT_RX3OuHACcL-sK4cXU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi81LzU3L0N1/bXVsdXNfQ2xvdWRz/X292ZXJfWWVsbG93/X1ByYWlyaWUyLmpw/Zy81MTJweC1DdW11/bHVzX0Nsb3Vkc19v/dmVyX1llbGxvd19Q/cmFpcmllMi5qcGc);
+    background-size: cover;
+   
+}
+    h1 {
+        color: blue;
+    }
+
+    p {
+        color:purple
+    }
+
+    button:hover {
+        background-color: red;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+#title {
+    border: solid white 2px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+</style>
+
+<script>
+
+    function makeDreamComeTrue() {
+
+        alert ("Dream has come true")
+        document.body.style.background = 'url("https://imgs.search.brave.com/t_s54hks_8hZSl6OSS1Z1pSlBHHQ4C5l_HaIMJsHOjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzllLzEz/LzhkLzllMTM4ZDcx/YjVmOGY4M2JjOWQx/OTFiYWJhZmYwMzk3/LmdpZg.gif")';
+        document.getElementById("title").style.visibility = "hidden";
+        
+    }
+
+</script>
