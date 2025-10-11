@@ -3,7 +3,7 @@
      <link rel="stylesheet" href="./titlesection/titlesection.css">
 </head>
 <body>
-    <div id="title">
+    <div class="main-section" id="title">
         <h1>Welcome to Tofunmi's web page</h1>
         <p>This is where dreams come true</p>
         <button onclick="makeDreamComeTrue()">Make dress come true</button>
@@ -19,6 +19,11 @@
     background-size: cover;
    
 }
+
+.main-section {
+    border: solid white 1px;
+}
+
 </style>
 
 <script>
@@ -30,5 +35,4 @@
         document.getElementById("title").style.visibility = "hidden";
         
     }
-
 </script>
