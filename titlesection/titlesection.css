@@ -1,5 +1,5 @@
  :root {
-    --titleSectionPrimaryColor: white;
+    --titleSectionPrimaryColor: grey;
  }
  #title {
     color: var(--titleSectionPrimaryColor);
