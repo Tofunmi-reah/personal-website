@@ -1,20 +1,22 @@
-  h1 {
-        color: blue;
-    }
-
-    p {
-        color:purple
-    }
-
-    button:hover {
-        background-color: red;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-#title {
+ :root {
+    --titleSectionPrimaryColor: white;
+ }
+ #title {
+    color: var(--titleSectionPrimaryColor);
     text-align: center;
     padding-top: 200px;
     background-image: url('../images/milin-john-Z7ebcHNkwXU-unsplash.jpg');
     background-position: center top;
 }
+
+.title-section-button {
+    color: var(--titleSectionPrimaryColor);
+	border: solid var(--titleSectionPrimaryColor);
+	border-radius: 5px;
+    padding: 15px 20px;
+	background-color: transparent; 
+}
+.title-section-button:hover {
+        background-color: red;
+        cursor: pointer;
+    }
