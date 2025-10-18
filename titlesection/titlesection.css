@@ -1,5 +1,6 @@
  :root {
     --titleSectionPrimaryColor: grey;
+	--titkeSectionSecondaryColor: rgb(198, 207, 209)
  }
  #title {
     color: var(--titleSectionPrimaryColor);
@@ -8,7 +9,12 @@
     background-image: url('../images/milin-john-Z7ebcHNkwXU-unsplash.jpg');
     background-position: center top;
 }
-
+.title-section-header {
+    margin-bottom: -5px;
+}
+.title-section-subtitle {
+    margin-bottom: 40px;
+}
 .title-section-button {
     color: var(--titleSectionPrimaryColor);
 	border: solid var(--titleSectionPrimaryColor);
@@ -17,6 +23,6 @@
 	background-color: transparent; 
 }
 .title-section-button:hover {
-        background-color: red;
+        background-color: var(--titkeSectionSecondaryColor);
         cursor: pointer;
     }
