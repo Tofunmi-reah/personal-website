@@ -2,12 +2,22 @@
 <head>
      <link rel="stylesheet" href="./titlesection/titlesection.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+     <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
 </head>
 <body>
     <div class="main-section" id="title">
         <h1 class="title-section-header">Ilesanmi Oluwatofunmi</h1>
         <p class="title-section-subtitle">Becoming A Full Stack Developer</p>
         <button class="title-section-button" onclick="makeDreamComeTrue()">COMBINE KNOWLEGDE WITH ACTION</button>
+    </div>
+    <div class="misc-section" id="aboutme">
+        <div class="text-box-container">
+            <h1> About Me</h1>
+            <p class="aboutme-section-description"> 
+            I am currently studying Electrical and Electronic Engineering in Covenant University in Nigeria while learing how to become a Full Stack Developer. 
+            The world gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in computer programming skills, 
+            which leads many opportunities for my future career.</p>
+        </div>
     </div>
 </body>
     
@@ -31,7 +41,14 @@
     background-size: cover;
     padding: 25px;
 }
-
+.misc-section {
+    width: 100vw;
+    padding: 100px 25px;
+}
+.text-box-container {
+    width: 65%;
+    margin: 0 auto;
+}
 </style>
 
 <script>
