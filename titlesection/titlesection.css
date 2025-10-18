@@ -1,6 +1,7 @@
  :root {
     --titleSectionPrimaryColor: grey;
-	--titkeSectionSecondaryColor: rgb(198, 207, 209)
+	--titleSectionSecondaryColor: rgb(198, 207, 209);
+    --titleSectionTertiaryColor: rgb(55, 90, 106);
  }
  #title {
     color: var(--titleSectionPrimaryColor);
@@ -23,6 +24,6 @@
 	background-color: transparent; 
 }
 .title-section-button:hover {
-        background-color: var(--titkeSectionSecondaryColor);
+        background-color: var(--titleSectionSecondaryColor);
         cursor: pointer;
     }
