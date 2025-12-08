@@ -21,18 +21,33 @@
             The world gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in computer programming skills, 
             which leads many opportunities for my future career.</p>
             <div class="aboutme-icons">
-                <a target="-blank"><i class="aboutme-icon fa-brands fa-linkedin"></i></a>
+                <a target="-blank"><i class="aboutme-icon fa-brands fa-linkedin"></i>
+                </a>
                 <a href="https://www.instagram.com/dfw_sola/" target="-blank">
-                    <i class="aboutme-icon fa-brands fa-instagram"></i></a>
-                <a target="_blank"><i class="aboutme-icon fa-brands fa-facebook"></i></a>
+                    <i class="aboutme-icon fa-brands fa-instagram"></i>
+                </a>
+                <a target="_blank"><i class="aboutme-icon fa-brands fa-facebook"></i>
+                </a>
                 <a href="mailto:oluwasolapeilesanmi@gmail.com" target="_blank">
-                    <i class="aboutme-icon fa-regular fa-envelope"></i></a>
+                    <i class="aboutme-icon fa-regular fa-envelope"></i>
+                </a>
             </div>
         </div>
     </div>
     <div class="main-section" id="craps-game">
-        <hi class="craps-game-title">Crap Casino Game</hi>
-        <div class="craps-game-container"> 
+        <div class="craps-game-title">Crap Casino Game</div>
+        <div class="craps-game-container">
+        <div class="craps-registration-pane">
+            <div>
+                Enter Username To Begin
+            </div>
+            <div>
+                <input class="craps-registration-input" id="craps-username-input">
+            </div>
+            <div class="craps-registration-continue" onclick="RegisterCrapPlayer()">
+                   Continue
+                </div>
+            </div>
 
         </div>
     </div>
@@ -56,6 +71,7 @@
 .main-section {
     width: 100vw;
     height: 100vh;
+    border: solid white 1px;
     background-size: cover;
     padding: 25px;
 }
@@ -82,6 +98,11 @@
         alert ("Dream has come true")
         document.body.style.background = 'url("https://imgs.search.brave.com/t_s54hks_8hZSl6OSS1Z1pSlBHHQ4C5l_HaIMJsHOjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzllLzEz/LzhkLzllMTM4ZDcx/YjVmOGY4M2JjOWQx/OTFiYWJhZmYwMzk3/LmdpZg.gif")';
         document.getElementById("title").style.visibility = "hidden";
-        
+
     }
+
+    function RegisterCrapPlayer() {
+        let crapsUsername = document.getElementById("craps-username-input").value
+    }
+
 </script>

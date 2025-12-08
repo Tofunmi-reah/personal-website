@@ -1,16 +1,16 @@
 #craps-game {
     background-image: url('../images/vegas.jpg');
-   background-position: center top;
+   background-position: cover;
     color: white;
 
 }
 
-.craps-game-title{
+.craps-game-title {
     text-align: center;
     margin-top: 100px;
 }
 
-.craps-game-container{
+.craps-game-container {
     width: min(700px, 80vw);
     height: min(500px, 57vw);
     border: solid white 2px;
@@ -19,4 +19,29 @@
     background-size: cover;
     background-position: center top;
 
+}
+
+.craps-registration-pane {
+    margin-top: 55px;
+    text-align: center;
+}
+
+.craps-registration-input {
+    background: none;
+    border: none;
+    border-bottom: solid white 1px;
+    margin-top: 25px;
+    color: red;
+    text-align: center;
+}
+.craps-registration-input:focus {
+    outline-width: 0;
+}
+
+.craps-registration-continue {
+    margin-top: 25px;
+}
+.craps-registration-continue:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
