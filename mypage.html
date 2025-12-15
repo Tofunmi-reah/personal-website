@@ -19,7 +19,7 @@
             <h1> About Me </h1>
             <p class="aboutme-section-description"> 
             I am currently studying Electrical and Electronic Engineering in Covenant University in Nigeria while learing how to become a Full Stack Developer. 
-            The world gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in computer programming skills, 
+            The world is gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in computer programming skills, 
             which leads many opportunities for my future career.</p>
             <div class="aboutme-icons">
                 <a target="-blank"><i class="aboutme-icon fa-brands fa-linkedin"></i>
@@ -62,7 +62,8 @@
                 </div>
             </div>
             <div class="craps-in-the-midde-container">
-                <div class="craps-roll-dice-container">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                <div class="craps-roll-dice-container" onclick="rollDice()">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                <div id="craps-roll-dice-animation-container"></div>
             </div>
             <div class="craps-round-manager no-select ">
                 <div class="craps-betting-grid no-select">
@@ -101,7 +102,6 @@ html, body {
 .main-section {
     width: 100vw;
     height: 100vh;
-    border: solid white 1px;
     background-size: cover;
     padding: 25px;
 }
@@ -124,14 +124,13 @@ html, body {
 </style>
 
 <script src="./craps-game/crapsgame.js"></script>
+<script type="text/javascript" src="https://unpkg.com/roll-a-die@2.0.1/dist/roll-a-die.js"></script>
 <script>
 
     function makeDreamComeTrue() {
-
         alert ("Dream has come true")
         document.body.style.background = 'url("https://imgs.search.brave.com/t_s54hks_8hZSl6OSS1Z1pSlBHHQ4C5l_HaIMJsHOjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzllLzEz/LzhkLzllMTM4ZDcx/YjVmOGY4M2JjOWQx/OTFiYWJhZmYwMzk3/LmdpZg.gif")';
         document.getElementById("title").style.visibility = "hidden";
-
     }
 
 </script>

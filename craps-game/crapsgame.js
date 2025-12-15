@@ -92,3 +92,12 @@ function setBetAmount (betAmount) {
     currentBetAmount = betAmount
     document.getElementById(crapsUserBetAmount).innerHTML = "$" + betAmount
 }
+
+function rollDice () {
+    const diceRollElement = document.getElementById("craps-roll-dice-animation-container")
+    rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult });
+}
+
+function processDiceResult (diceResult) {
+    console.log(diceResult)
+}
