@@ -5,6 +5,7 @@
      <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
      <link rel="stylesheet" href="./craps-game/crapsgame.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <link rel="stylesheet" href="./craps-game/utilis.css">
 </head>
 
 <body>
@@ -53,24 +54,29 @@
                 <div>
                     Welcome, <span id="craps-stats-username"></span>
                 </div>
-                <div class="craps-stats-money-container">
+                <div id="craps-stats-money-container">
                     $<span id="craps-stats-money"></span>
                 </div>
                 <div>
                     Rounds: <span id="craps-stats-rounds"></span>
                 </div>
             </div>
-            <div class="craps-round-manager">
-                <div id="EVEN" onclick="betEven()">
+            <div class="craps-in-the-midde-container">
+                <div class="craps-roll-dice-container">Roll Dice <i class="fa-solid fa-dice"></i></div>
+            </div>
+            <div class="craps-round-manager no-select ">
+                <div class="craps-betting-grid no-select">
+                    <div class="craps-bet-button" id="EVEN" onclick="betEven()">
                     EVEN
                 </div>
-                <div id="ODD" onclick="betOdd()">
+                <div class="craps-bet-amount-container">
+                    <span class="craps-user-bet-amount-change" onclick="decreaseBet()">-</span>
+                    <span id="craps-user-bet-amount">$100</span>
+                    <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
+                </div>
+                <div class="craps-bet-button" id="ODD" onclick="betOdd()">
                     ODD
                 </div>
-                <div>
-                    <span onclick="decreaseBet()">-</span>
-                    <span id="craps-user-bet-amount">$100</span>
-                    <span onclick="increaseBet()">+</span>
                 </div>
             </div>
         </div>
@@ -87,10 +93,10 @@
   font-family: Roboto;
 }
 
-    html, body {
-        margin: 0px;
-        padding: 0px;
-    }
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
 
 .main-section {
     width: 100vw;
@@ -99,10 +105,12 @@
     background-size: cover;
     padding: 25px;
 }
+
 .misc-section {
     width: 100vw;
     padding: 120px 25px;
 }
+
 .text-box-container {
     width: 65%;
     margin: 0 auto;
