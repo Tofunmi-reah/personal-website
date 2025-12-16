@@ -30,7 +30,6 @@
     background-size: cover;
     background-position: center top;
     position: relative;
-
 }
 
 #craps-registration-pane {
@@ -95,6 +94,11 @@
 .craps-roll-dice-container:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+#craps-roll-dice-animation-container {
+    margin-top: calc(var(--height-scale) * -0.2);
+    margin-left: calc(var(--height-scale) * -0.2);
 }
 
 .craps-betting-grid {
