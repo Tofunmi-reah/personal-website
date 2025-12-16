@@ -102,13 +102,13 @@ function rollDice () {
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: processDiceResult, delay: 10000000});
 }
 
+window.addEventListener("resize", formatDiceScale)
 function formatDiceScale () {
     const vw = window.innerWidth * 80
     const vh = window.innerHeight * 0.8
     const widthScale = Math.min(700, vw, vh)
     const heightScale = widthScale * 0.714
     const scale = heightScale / 391.272
-    alert(scale)
     document.getElementById(crapsRollDiceAnimationContainer).style.transform = "scale(" + scale + ")"
 }
 
