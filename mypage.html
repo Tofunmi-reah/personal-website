@@ -3,7 +3,9 @@
      <link rel="stylesheet" href="./titlesection/titlesection.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
      <link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
+     <link rel="stylesheet" href="./craps-game/crapsgame.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <link rel="stylesheet" href="./craps-game/utilis.css">
 </head>
 
 <body>
@@ -14,18 +16,87 @@
     </div>
     <div class="misc-section" id="aboutme">
         <div class="text-box-container">
-            <h1> About Me</h1>
+            <h1> About Me </h1>
             <p class="aboutme-section-description"> 
-            I am currently studying Electrical and Electronic Engineering in Covenant University in Nigeria while learing how to become a Full Stack Developer. 
-            The world gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in computer programming skills, 
-            which leads many opportunities for my future career.</p>
+            I am currently studying Electrical and Electronic Engineering in Nigeria while learing how to become a Full Stack Developer. 
+            The world is gradually moving into advanced technology(AI) which I assume it is necessary to have a degree of knowledge in software development skills,
+            which leads opportunities for my future career.</p>
             <div class="aboutme-icons">
-                <a target="-blank"><i class="aboutme-icon fa-brands fa-linkedin"></i></a>
+                <a target="-blank"><i class="aboutme-icon fa-brands fa-linkedin"></i>
+                </a>
                 <a href="https://www.instagram.com/dfw_sola/" target="-blank">
-                    <i class="aboutme-icon fa-brands fa-instagram"></i></a>
-                <a target="_blank"><i class="aboutme-icon fa-brands fa-facebook"></i></a>
+                    <i class="aboutme-icon fa-brands fa-instagram"></i>
+                </a>
+                <a target="_blank"><i class="aboutme-icon fa-brands fa-facebook"></i>
+                </a>
                 <a href="mailto:oluwasolapeilesanmi@gmail.com" target="_blank">
-                    <i class="aboutme-icon fa-regular fa-envelope"></i></a>
+                    <i class="aboutme-icon fa-regular fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-section" id="craps-game">
+        <div class="craps-game-title">Crap Casino Game</div>
+        <div class="craps-game-container">
+        <div id="craps-registration-pane">
+            <div>
+                Enter Username To Begin
+            </div>
+            <div>
+                <input class="craps-registration-input" id="craps-username-input">
+            </div>
+            <div class="craps-registration-continue" onclick="RegisterCrapPlayer()">
+                Continue
+            </div>
+        </div>
+         <div id="craps-main-section">
+            <div class="craps-main-section-stats">
+                <div>
+                    Welcome, <span id="craps-stats-username"></span>
+                </div>
+                <div id="craps-stats-money-container">
+                    $<span id="craps-stats-money"></span>
+                </div>
+                <div>
+                    Rounds: <span id="craps-stats-rounds"></span>
+                </div>
+            </div>
+            <div class="craps-in-the-middle-container">
+                <div id="craps-roll-dice-button" class="craps-roll-dice-container no-select" onclick="rollDice()">Roll Dice <i class="fa-solid fa-dice"></i></div>
+                <div id="craps-roll-dice-animation-container"></div>
+            </div>
+            <div class="craps-round-manager no-select ">
+                <div id="craps-betting-grid-container">
+                    <div class="craps-betting-grid no-select">
+                        <div class="craps-bet-button" id="EVEN" onclick="betEven()">
+                            EVEN
+                        </div>
+                        <div class="craps-bet-amount-container">
+                            <span class="craps-user-bet-amount-change" onclick="decreaseBet()">-</span>
+                            <span id="craps-user-bet-amount">$100</span>
+                            <span class="craps-user-bet-amount-change" onclick="increaseBet()">+</span>
+                        </div>
+                        <div class="craps-bet-button" id="ODD" onclick="betOdd()">
+                            ODD
+                        </div>
+                    </div> 
+                </div>
+                  <div id="craps-round-finish-grid-container">
+                    <div class="craps-round-finish-grid no-select">
+                        <div id="craps-next-round-button" class="craps-round-finish-button" onclick="setupNextRound()">
+                            NEXT ROUND
+                        </div>
+                        <div id="craps-next-round-button-disabled" class="craps-round-finish-button">
+                            NEXT ROUND
+                        </div>
+                        <div id="craps-round-finish-message">
+                            YOU WIN!
+                        </div>
+                        <div class="craps-round-finish-button" onclick="exitGame()">
+                            EXIT GAME
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>
@@ -40,10 +111,10 @@
   font-family: Roboto;
 }
 
-    html, body {
-        margin: 0px;
-        padding: 0px;
-    }
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
 
 .main-section {
     width: 100vw;
@@ -51,10 +122,12 @@
     background-size: cover;
     padding: 25px;
 }
+
 .misc-section {
     width: 100vw;
     padding: 120px 25px;
 }
+
 .text-box-container {
     width: 65%;
     margin: 0 auto;
@@ -67,13 +140,14 @@
 }
 </style>
 
+<script src="./craps-game/crapsgame.js"></script>
+<script type="text/javascript" src="https://unpkg.com/roll-a-die@2.0.1/dist/roll-a-die.js"></script>
 <script>
 
     function makeDreamComeTrue() {
-
         alert ("Dream has come true")
         document.body.style.background = 'url("https://imgs.search.brave.com/t_s54hks_8hZSl6OSS1Z1pSlBHHQ4C5l_HaIMJsHOjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzllLzEz/LzhkLzllMTM4ZDcx/YjVmOGY4M2JjOWQx/OTFiYWJhZmYwMzk3/LmdpZg.gif")';
         document.getElementById("title").style.visibility = "hidden";
-        
     }
+
 </script>
