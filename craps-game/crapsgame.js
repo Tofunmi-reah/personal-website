@@ -22,7 +22,7 @@ const crapsRollDiceButton = "craps-roll-dice-button"
 const crapsRollDiceAnimationContainer = "craps-roll-dice-animation-container"
 const crapsBettingGripContainer = "craps-betting-grid-container"
 const crapsRoundFinishGridContainer = "craps-round-finish-grid-container"
-const crapsRroundFinishMessage = "craps-round-finish-message"
+const crapsRoundFinishMessage = "craps-round-finish-message"
 
 // In-game variables
 let currentRounds = startingRounds
@@ -49,12 +49,23 @@ function removeRegistrationPane () {
     document.getElementById(crapsRegisterPane).style.display = "none"
 }
 
+function showRegistrationPane () {
+    document.getElementById(crapsRegisterPane).style.display = "block"
+}
+
 function showMainGamesection () {
-    document.getElementById(crapsMainSection).style.display = "Block"
+    document.getElementById(crapsMainSection).style.display = "block"
+}
+
+function hideMainGamesection () {
+    document.getElementById(crapsMainSection).style.display = "none"
 }
 
 function setupFirstRound () {
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
+    document.getElementById(crapsRollDiceButton).style.display = "block"
+    document.getElementById(crapsBettingGripContainer).style.display = "block"
     document.getElementById(crapsStatsUsername).innerHTML = crapsUsername
     setMoney(startingMoney)
     setRound(startingRounds)
@@ -107,6 +118,7 @@ function setBetAmount (betAmount) {
 function rollDice () {
     canChangeBet = false
     formatDiceScale()
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "block"
     document.getElementById(crapsRollDiceButton).style.display = "none"
     const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessDiceResult, delay: 1000000});
@@ -146,5 +158,12 @@ function processDiceResult (diceResult) {
     }
     document.getElementById(crapsBettingGripContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
-    document.getElementById(crapsRroundFinishMessage).innerHTML = roundFinishMessage
+    document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
+}
+
+function exitGame () {
+    alert("After playing" + currentRounds + " rounds, you leave with " + currentMoney + "$")
+    hideMainGamesection()
+    showRegistrationPane()
+    document.getElementById(crapsUsernameInput).value = ""
 }
